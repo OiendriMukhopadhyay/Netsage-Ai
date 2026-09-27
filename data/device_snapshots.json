@@ -1,0 +1,68 @@
+[
+  {
+    "case_id": "C001",
+    "vlan_check": {"port_name": "Fa0/2", "configured_vlan": 1, "expected_vlan": 10}
+  },
+  {
+    "case_id": "C005",
+    "vlan_check": {"port_name": "Fa0/3", "configured_vlan": 10, "expected_vlan": 10}
+  },
+  {
+    "case_id": "C007",
+    "gateway_check": {"host_gateway": "192.168.1.100", "router_ip": "192.168.1.1"}
+  },
+  {
+    "case_id": "C008",
+    "interfaces_for_down_check": [
+      {"name": "Vlan10", "admin_status": "administratively down", "line_status": "down"}
+    ]
+  },
+  {
+    "case_id": "C025",
+    "interfaces_for_down_check": [
+      {"name": "Gi0/1 (R1)", "admin_status": "up", "line_status": "up"},
+      {"name": "Gi0/1 (R2)", "admin_status": "up", "line_status": "up"}
+    ]
+  },
+  {
+    "case_id": "C011",
+    "interfaces_for_mask_check": [
+      {"name": "Server", "ip": "10.10.10.50", "mask": "255.255.255.128"},
+      {"name": "R1-Gi0/0", "ip": "10.10.10.1", "mask": "255.255.255.0"}
+    ]
+  },
+  {
+    "case_id": "C015",
+    "hosts_for_dup_check": [
+      {"name": "Printer (static)", "ip": "192.168.10.50"},
+      {"name": "PC-DHCP-lease", "ip": "192.168.10.50"}
+    ]
+  },
+  {
+    "case_id": "C021",
+    "route_check": {
+      "routing_table": ["192.168.1.0/24", "192.168.3.0/24", "0.0.0.0/0"],
+      "destination_cidr": "192.168.2.0/24"
+    }
+  },
+  {
+    "case_id": "C009",
+    "route_check": {
+      "routing_table": ["0.0.0.0/0"],
+      "destination_cidr": "192.168.10.0/24"
+    }
+  },
+  {
+    "case_id": "C004",
+    "interfaces_for_down_check": [
+      {"name": "Gi0/0.30", "admin_status": "administratively down", "line_status": "down"}
+    ]
+  },
+  {
+    "case_id": "C023",
+    "route_check": {
+      "routing_table": ["192.168.1.0/24", "192.168.99.0/24", "0.0.0.0/0"],
+      "destination_cidr": "192.168.99.0/24"
+    }
+  }
+]
