@@ -1,0 +1,54 @@
+======================================================================
+NetSage AI Rule Checker - Sample Output
+======================================================================
+
+--- A) STRUCTURED deterministic checks (device_snapshots.json) ---
+
+[C001] 1 finding(s):
+   - (HIGH) missing_vlan: Fa0/2 is on VLAN 1, expected VLAN 10
+
+[C005] 0 finding(s):
+   - No deterministic issues found
+
+[C007] 1 finding(s):
+   - (HIGH) gateway_mismatch: Host default gateway 192.168.1.100 does not match router interface IP 192.168.1.1
+
+[C008] 1 finding(s):
+   - (HIGH) interface_down: Vlan10 is administratively down (needs 'no shutdown')
+
+[C025] 0 finding(s):
+   - No deterministic issues found
+
+[C011] 1 finding(s):
+   - (HIGH) subnet_mask_mismatch: Mismatched prefix lengths on same segment: Server=10.10.10.50/255.255.255.128, R1-Gi0/0=10.10.10.1/255.255.255.0
+
+[C015] 1 finding(s):
+   - (HIGH) duplicate_ip: IP 192.168.10.50 is assigned to multiple devices: Printer (static), PC-DHCP-lease
+
+[C021] 0 finding(s):
+   - No deterministic issues found
+
+[C009] 0 finding(s):
+   - No deterministic issues found
+
+[C004] 1 finding(s):
+   - (HIGH) interface_down: Gi0/0.30 is administratively down (needs 'no shutdown')
+
+[C023] 0 finding(s):
+   - No deterministic issues found
+
+----------------------------------------------------------------------
+--- B) TEXT-SCAN pass over all cases.csv rows (heuristic) ---
+Flagged 17 / 36 cases with at least one keyword match.
+
+[C001] (VLAN): missing_vlan, missing_route
+[C002] (VLAN): none
+[C003] (VLAN): none
+[C004] (VLAN): interface_down
+[C005] (VLAN): missing_vlan
+[C006] (VLAN): none
+[C007] (Gateway): gateway_mismatch
+[C008] (Gateway): interface_down
+[C009] (Gateway): missing_route
+[C010] (Gateway): gateway_mismatch
+... (26 more rows in logs/rule_checker_textscan_results.csv)

@@ -1,0 +1,12 @@
+case_id,check,severity,detail
+C001,missing_vlan,high,"Fa0/2 is on VLAN 1, expected VLAN 10"
+C005,none,-,No deterministic issues found
+C007,gateway_mismatch,high,Host default gateway 192.168.1.100 does not match router interface IP 192.168.1.1
+C008,interface_down,high,Vlan10 is administratively down (needs 'no shutdown')
+C025,none,-,No deterministic issues found
+C011,subnet_mask_mismatch,high,"Mismatched prefix lengths on same segment: Server=10.10.10.50/255.255.255.128, R1-Gi0/0=10.10.10.1/255.255.255.0"
+C015,duplicate_ip,high,"IP 192.168.10.50 is assigned to multiple devices: Printer (static), PC-DHCP-lease"
+C021,none,-,No deterministic issues found
+C009,none,-,No deterministic issues found
+C004,interface_down,high,Gi0/0.30 is administratively down (needs 'no shutdown')
+C023,none,-,No deterministic issues found
